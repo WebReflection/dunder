@@ -1,0 +1,22 @@
+{
+  "version": "0.0.0",
+  "name": "dunder",
+  "description": "",
+  "homepage": "https://github.com/WebReflection/dunder",
+  "keywords": [],
+  "author": {
+    "name": "",
+    "web": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/WebReflection/dunder.git"
+  },
+  "main": "./build/dunder.node.js",
+  "scripts": {
+    "test": "node test/.test.js"
+  },
+  "dependencies": {
+    "wru": ">= 0.0.0"
+  }
+}
