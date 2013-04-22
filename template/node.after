@@ -1,1 +1,3 @@
-;
+
+dunder.dunder = dunder;
+module.exports = dunder;

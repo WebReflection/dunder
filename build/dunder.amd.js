@@ -1,2 +1,2 @@
 /*! (C) WebReflection Mit Style License */
-define({});
+define(function(){var e;return e||(e=function(e){"use strict";var t=e.getOwnPropertyDescriptor,n=e.getPrototypeOf,r=e.getOwnPropertyNames,i=e.defineProperty,s=e.create,o=e.prototype,u="__proto__",a="length",f,l,c;if(u in o)try{c=t(o,u).set,f=function(t,r){return arguments[a]===1?n(t):(c.call(t,r),t)},f({},o),l=function(){delete o[u]}}catch(h){f=function(t,n){return arguments[a]===1?t[u]:(t[u]=n,t)}}else c=function(e,n){var s=r(e),o=s[a],u;if(s.indexOf(a)<0)while(o--)u=s[o],i(n,u,t(e,u));else s.push.call(n,e);return n},f=function(t,r){return arguments[a]===1?n(t):c(t,s(r))};return f.free=l||e,f}(Object)),e});

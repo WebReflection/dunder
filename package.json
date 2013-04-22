@@ -1,12 +1,19 @@
 {
-  "version": "0.0.0",
+  "version": "0.1.0",
   "name": "dunder",
-  "description": "",
+  "description": "hot-swap inheritance for every engine",
   "homepage": "https://github.com/WebReflection/dunder",
-  "keywords": [],
+  "keywords": [
+    "__proto__",
+    "free",
+    "dunder",
+    "inheritance",
+    "ES5",
+    "ES6"
+  ],
   "author": {
-    "name": "",
-    "web": ""
+    "name": "Andrea Giammarchi",
+    "web": "http://webreflection.blogspot.com/"
   },
   "repository": {
     "type": "git",
