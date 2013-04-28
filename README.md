@@ -39,3 +39,7 @@ dunder.free();
 ```
 
 THe list of engines able to get rid of __proto__ as getter/setter is not known yet.
+
+### Free From __proto__ Problems
+
+There is an extra method to try to get rid of `__proto__` called `dunder.free()`, it returns a boolean if `delete Object.prototype.__proto__` was successful, which should be the case with most recent JS engines.

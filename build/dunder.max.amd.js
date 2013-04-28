@@ -34,6 +34,7 @@ if (!dunder) {
       ObjectPrototype = Object.prototype,
       magic = '__proto__',
       length = 'length',
+      freed = false,
       dunder,
       free,
       tmp;
@@ -54,7 +55,9 @@ if (!dunder) {
         dunder({}, ObjectPrototype);
         // it worked so we could get rid of __proto__
         free = function () {
-          delete ObjectPrototype[magic];
+          return freed || (
+            freed = delete ObjectPrototype[magic]
+          );
         };
         // will work only in modern browsers
       } catch (e) {
@@ -98,7 +101,9 @@ if (!dunder) {
         return tmp(object, create(proto));
       };
     }
-    dunder.free = free || Object;
+    dunder.free = free || function () {
+      return false;
+    };
     return dunder;
   }(Object));
 }
