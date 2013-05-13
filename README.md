@@ -38,7 +38,7 @@ dunder.free();
 '__proto__' in Object.prototype; // false
 ```
 
-THe list of engines able to get rid of __proto__ as getter/setter is not known yet.
+The list of engines able to get rid of __proto__ as getter/setter is not known yet.
 
 ### Free From __proto__ Problems
 

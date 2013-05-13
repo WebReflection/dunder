@@ -9,7 +9,8 @@ wru.test([
       wru.assert(typeof dunder == "function");
       var a = {}, b = {};
       a = dunder(a, b);
-      wru.assert(b.isPrototypeOf(a));
+      wru.assert('inheritance set', b.isPrototypeOf(a));
+      wru.assert('inheritance get', dunder(a) === b);
     }
   }
 ]);
