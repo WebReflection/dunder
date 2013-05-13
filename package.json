@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "name": "dunder",
   "description": "hot-swap inheritance for every engine",
   "homepage": "https://github.com/WebReflection/dunder",

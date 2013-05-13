@@ -26,13 +26,11 @@ if (!dunder) {
   dunder = (function(Object) {
     'use strict';
     var
-      getPrototypeOf = Object.getPrototypeOf || function (object) {
-        return object[magic];
-      },
+      getPrototypeOf = Object.getPrototypeOf,
       setPrototypeOf = Object.setPrototypeOf,
       getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor,
       getOwnPropertyNames = Object.getOwnPropertyNames,
-      defineProperty = Object.defineProperty,
+      defineProperties = Object.defineProperties,
       create = Object.create,
       ObjectPrototype = Object.prototype,
       magic = '__proto__',
@@ -78,25 +76,19 @@ if (!dunder) {
       // IE < 11
       tmp = function (original, current) {
         var
+          descriptor = {},
           keys = getOwnPropertyNames(original),
           len = keys[length],
+          i = 0,
           key;
-        if (keys.indexOf(length) < 0) {
-          while (len--) {
-            key = keys[len];
-            defineProperty(
-              current,
-              key,
-              getOwnPropertyDescriptor(
-                original,
-                key
-              )
-            );
-          }
-        } else {
-          keys.push.call(current, original);
+        while (i < len) {
+          key = keys[i];
+          descriptor[key] = getOwnPropertyDescriptor(
+            original,
+            key
+          );
         }
-        return current;
+        return defineProperties(current, descriptor);
       };
       dunder = function dunder(object, proto) {
         return arguments[length] === 1 ?
